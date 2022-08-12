@@ -1,0 +1,74 @@
+
+.skill_title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.skill_title > h1 {
+  display: block;
+}
+
+.skill_list {
+  display: flex;
+  list-style: none;
+  height: 4rem;
+  width: 70rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill_list > li {
+  margin-inline-start: 4rem;
+}
+
+.skill_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.progress_bar {
+  width: 15rem;
+  height: 1rem;
+  background-color: #121619;
+  border-radius: 3rem;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.progress_javascript {
+  width: 50%;
+  height: 100%;
+  background-color: #0070f3;
+}
+
+.progress_python {
+  width: 40%;
+  height: 100%;
+  background-color: #0070f3;
+}
+
+.progress_html {
+  width: 75%;
+  height: 100%;
+  background-color: #0070f3;
+}
+
+.progress_react {
+  width: 25%;
+  height: 100%;
+  background-color: #0070f3;
+}
+
+.progress_express {
+  width: 45%;
+  height: 100%;
+  background-color: #0070f3;
+}
+
+.progress_django{
+  width: 30%;
+  height: 100%;
+  background-color: #0070f3;
+}
