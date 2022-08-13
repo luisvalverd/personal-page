@@ -14,11 +14,19 @@
 
 .title_navbar {
   width: 20em; 
-}
-
-.title_navbar > h3 {
   display: flex;
   justify-content: center;
+}
+
+.title_navbar > span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: .2s;
+}
+
+.title_navbar > span:hover {
+  color: #0070f3;
+  cursor: pointer;
 }
 
 .links_list {
@@ -43,7 +51,6 @@
 
 .link:hover {
   color: #0070f3;
-  font-weight: bold;
 }
 
 

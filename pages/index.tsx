@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import styleNavbar from "../styles/Navbar.module.css"
 import Skills from '../components/skills'
+import PersonalInformation from '../components/information'
 
 const Home: NextPage = () => {
   return (
@@ -20,17 +21,19 @@ const Home: NextPage = () => {
       </header>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">My Personal Web</a>
-        </h1>
 
-        <p className={styles.description}>
-        </p>
+        <div className={styles.main_title}>
+          <h1 className={styles.title}>
+            Welcome to <a href="https://nextjs.org">My Personal Web</a>
+          </h1>
+        </div>
 
-        <div className={styles.grid}>
-          <div className={styles.information}>
-            <p>Hello my name is luis, Im a software develop, I have 21 years old, Im from Ecuador</p>
-          </div>
+        <div className={styles.grid, styles.personal_information}>
+          <PersonalInformation></PersonalInformation>
+        </div>
+
+        <div>
+
         </div>
 
         <Skills></Skills>
