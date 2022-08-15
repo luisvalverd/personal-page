@@ -1,13 +1,24 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Navbar from '../components/navbar'
-import styleNavbar from "../styles/Navbar.module.css"
-import Skills from '../components/skills'
-import PersonalInformation from '../components/information'
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import Navbar from '../components/navbar';
+import styleNavbar from "../styles/Navbar.module.css";
+import Skills from '../components/skills';
+import PersonalInformation from '../components/information';
+import Arrow_Down from '../components/icons/icon-arrow';
+import { useRef } from "react";
+import Projects from '../components/projects';
+
 
 const Home: NextPage = () => {
+  const ref = useRef(null);
+
+  const handleBtnScroll = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +27,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styleNavbar.header}>
+      <header ref={ref} className={styleNavbar.header}>
         <Navbar></Navbar>
       </header>
 
@@ -24,19 +35,25 @@ const Home: NextPage = () => {
 
         <div className={styles.main_title}>
           <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">My Personal Web</a>
+            Welcome to <Link href="/">My Personal Web</Link>
           </h1>
+          <button onClick={handleBtnScroll} className={styles.btn_down}>
+            <Arrow_Down></Arrow_Down>
+          </button>
         </div>
 
-        <div className={styles.grid, styles.personal_information}>
+        <div className={styles.personal_information}>
           <PersonalInformation></PersonalInformation>
         </div>
 
-        <div>
-
+        <div className={styles.projects}>
+          <Projects></Projects>
         </div>
 
-        <Skills></Skills>
+        <div>
+          <Skills></Skills>
+        </div>
+
 
       </main>
 

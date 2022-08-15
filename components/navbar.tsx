@@ -11,10 +11,12 @@ const Navbar: React.FC = () => {
       <div className={styles.links_list}>
         <ul>
           <li className={styles.link}>
-            <Link href="/">Home</Link>
+            <Link href="https://github.com/luisvalverd" passHref>
+              <a target="_blank">Github</a>
+            </Link>
           </li>
           <li className={styles.link}>
-            <Link href="/about">About</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className={styles.link}>
             <Link href="/contact">Contact</Link>
