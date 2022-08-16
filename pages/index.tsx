@@ -8,12 +8,33 @@ import styleNavbar from "../styles/Navbar.module.css";
 import Skills from '../components/skills';
 import PersonalInformation from '../components/information';
 import Arrow_Down from '../components/icons/icon-arrow';
-import { useRef } from "react";
 import Projects from '../components/projects';
-
+import { useState, useEffect, useRef } from "react";
 
 const Home: NextPage = () => {
+  const [background, setBgNavbar] = useState("black");
+  const [scrollBtn, setScrollBtn] = useState<any>("hidden");
+  const init_ref = useRef();
   const ref = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const main: any = init_ref.current;
+      let { y } = main.getBoundingClientRect();
+
+      let bg_color_navbar = y <= 0 ? "#0070f3" : "black";
+      let scroll_hidden = y <= 0 ? "visible" : "hidden"; 
+
+      setBgNavbar(bg_color_navbar); 
+      setScrollBtn(scroll_hidden);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  })
 
   const handleBtnScroll = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -28,16 +49,16 @@ const Home: NextPage = () => {
       </Head>
 
       <header ref={ref} className={styleNavbar.header}>
-        <Navbar></Navbar>
+        <Navbar background={background} ></Navbar> 
       </header>
 
       <main className={styles.main}>
 
-        <div className={styles.main_title}>
+        <div ref={init_ref} className={styles.main_title}>
           <h1 className={styles.title}>
             Welcome to <Link href="/">My Personal Web</Link>
           </h1>
-          <button onClick={handleBtnScroll} className={styles.btn_down}>
+          <button onClick={handleBtnScroll} style={{ visibility: scrollBtn, transition: ".2s" }} className={styles.btn_down}>
             <Arrow_Down></Arrow_Down>
           </button>
         </div>
@@ -53,7 +74,6 @@ const Home: NextPage = () => {
         <div>
           <Skills></Skills>
         </div>
-
 
       </main>
 

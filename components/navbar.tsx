@@ -2,10 +2,14 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css"
 
-const Navbar: React.FC = () => {
+interface Props {
+  background: any;
+}
+
+const Navbar: React.FC<Props> = (props: Props) => {
   return (
-    <div className={styles.navbar}>
-      <div className={styles.title_navbar}>
+    <div className={styles.navbar} style={{ background: props.background, transition: ".2s" }}>
+      <div className={styles.title_navbar} >
         <Link className={styles.title} href="/"><span>Personal Web</span></Link>
       </div>
       <div className={styles.links_list}>
