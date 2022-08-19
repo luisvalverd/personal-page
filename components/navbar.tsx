@@ -6,12 +6,22 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 interface Props {
   background: any;
   refContact: any;
+  refSkill: any;
+  refProjects: any;
 }
 
 const Navbar: React.FC<Props> = (props: Props) => {
 
   const btnContact = () => {
-  props.refContact.current?.scrollIntoView({ behavior: "smooth" });
+    props.refContact.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const btnSkill = () => {
+    props.refSkill.current?.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const btnProjects = () => {
+    props.refProjects.current?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
@@ -25,6 +35,14 @@ const Navbar: React.FC<Props> = (props: Props) => {
 
           <li className={styles.link}>
             <Link href="/">Home</Link>
+          </li>
+
+          <li className={styles.link}>
+            <a onClick={btnProjects}>Projects</a>
+          </li>
+
+          <li className={styles.link}>
+            <a onClick={btnSkill}>Skills</a>
           </li>
 
           <li className={styles.link}>

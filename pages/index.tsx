@@ -19,6 +19,8 @@ const Home: NextPage = () => {
   const init_ref = useRef();
   const ref = useRef(null);
   const contact_ref = useRef(null);
+  const skills_ref = useRef(null);
+  const projects_ref = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +54,7 @@ const Home: NextPage = () => {
       </Head>
 
       <header ref={ref} className={styleNavbar.header}>
-        <Navbar background={background} refContact={contact_ref}></Navbar>
+        <Navbar background={background} refContact={contact_ref} refSkill={skills_ref} refProjects={projects_ref}></Navbar>
       </header>
 
       <main className={styles.main}>
@@ -70,11 +72,11 @@ const Home: NextPage = () => {
           <PersonalInformation></PersonalInformation>
         </div>
 
-        <div className={styles.projects}>
+        <div ref={projects_ref} className={styles.projects}>
           <Projects></Projects>
         </div>
 
-        <div>
+        <div ref={skills_ref} className={styles.skill}>
           <Skills></Skills>
         </div>
 

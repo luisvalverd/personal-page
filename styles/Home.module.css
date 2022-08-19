@@ -27,11 +27,16 @@
   padding-top: 5rem;
 }
 
+.skill {
+  padding-top: 5rem;
+}
+
 .projects {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
+  padding-top: 5rem;
 }
 
 
