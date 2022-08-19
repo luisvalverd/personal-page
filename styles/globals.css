@@ -15,6 +15,37 @@ a {
   box-sizing: border-box;
 }
 
+.navbar-after {
+  content: "";
+  width: 110%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+
+  left: calc(-110% - 4em);
+
+
+  border-bottom: 4em solid #0070f3;
+  border-right: 4em solid transparent;
+  transition: .4s;
+}
+
+.animation-navbar {
+  content: "";
+  width: 110%;
+  position: fixed;
+  z-index: 0;
+  top: -1;
+
+  /*left: calc(-100% - 4em);*/
+
+
+  border-bottom: 4em solid #0070f3;
+  border-right: 4em solid transparent;
+  transition: .4s;
+  left: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

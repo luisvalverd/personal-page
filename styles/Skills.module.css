@@ -19,6 +19,11 @@
   align-items: center
 }
 
+.skill_img {
+  position: relative;
+  z-index: -1;
+}
+
 .skill_title {
   width: 100%;
   display: flex;

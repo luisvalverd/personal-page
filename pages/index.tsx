@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Navbar from '../components/navbar';
 import styleNavbar from "../styles/Navbar.module.css";
@@ -10,22 +9,26 @@ import PersonalInformation from '../components/information';
 import Arrow_Down from '../components/icons/icon-arrow';
 import Projects from '../components/projects';
 import { useState, useEffect, useRef } from "react";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 
 const Home: NextPage = () => {
-  const [background, setBgNavbar] = useState("black");
+  const [background, setBgNavbar] = useState("navbar-after");
   const [scrollBtn, setScrollBtn] = useState<any>("hidden");
+
+  // refs
   const init_ref = useRef();
   const ref = useRef(null);
+  const contact_ref = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const main: any = init_ref.current;
       let { y } = main.getBoundingClientRect();
 
-      let bg_color_navbar = y <= 0 ? "#0070f3" : "black";
-      let scroll_hidden = y <= 0 ? "visible" : "hidden"; 
+      let bg_color_navbar = y <= 0 ? "animation-navbar" : "navbar-after";
+      let scroll_hidden = y <= 0 ? "visible" : "hidden";
 
-      setBgNavbar(bg_color_navbar); 
+      setBgNavbar(bg_color_navbar);
       setScrollBtn(scroll_hidden);
     }
 
@@ -49,7 +52,7 @@ const Home: NextPage = () => {
       </Head>
 
       <header ref={ref} className={styleNavbar.header}>
-        <Navbar background={background} ></Navbar> 
+        <Navbar background={background} refContact={contact_ref}></Navbar>
       </header>
 
       <main className={styles.main}>
@@ -78,16 +81,62 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <div ref={contact_ref} className={styles.contact}>
+          <h1>Contact</h1>
+          <div>
+            <ul>
+              <li>
+                <p>
+                  <b>Phone: </b>
+                  <span>+593 099 015 9128</span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>Email: </b>
+                  <span>luis.valverde120@gmail.com</span>
+                </p>
+              </li>
+              <li>
+                <div className={styles.contact_links}>
+                
+                  <Link href="https://www.linkedin.com/in/luis-valverde-102653216" passHref>
+                    <a target="_blanck">
+
+                      <div className={styles.contact_icons}>
+                        <AiFillLinkedin className={styles.icons}></AiFillLinkedin>
+                      </div>
+
+                      <span>
+                        LinkedIn
+                      </span>
+
+                    </a>
+                  </Link>
+                </div>
+              </li>
+              <li>
+                <div className={styles.contact_links}>
+
+                  <Link href="https://github.com/luisvalverd" passHref>
+
+                    <a target="_blanck">
+                      <div className={styles.contact_icons}>
+                        <AiFillGithub className={styles.icons}></AiFillGithub>
+                      </div>
+
+                      <span>
+                        GitHub
+                      </span>
+                    </a>
+
+                  </Link>
+
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
   )

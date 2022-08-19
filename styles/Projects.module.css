@@ -16,6 +16,11 @@
   margin-top: 3rem;
 }
 
+.projects_image img {
+  position: relative;
+  z-index: -2;
+}
+
 .projects_description {
   width: 25rem;
 }

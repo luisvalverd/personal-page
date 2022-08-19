@@ -23,6 +23,11 @@
   height: 20rem;
 }
 
+.profile_image img {
+  position: relative;
+  z-index: -1; 
+}
+
 .profile_information {
   display: flex;
   flex-direction: row;

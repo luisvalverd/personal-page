@@ -3,11 +3,7 @@ import Image from "next/image";
 import profile from "../public/img/Profile.jpg";
 import styles from "../styles/Photos.module.css";
 
-
-
 const PersonalInformation: React.FC = () => {
-
-
   return (
     <div className={styles.profile}>
       <div className={styles.profile_title}>

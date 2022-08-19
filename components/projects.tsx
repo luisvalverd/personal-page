@@ -12,10 +12,12 @@ const Projects: React.FC = () => {
       <h1 className={styles.title_projects}>Projects</h1>
       <ul className={styles.project_list}>
         <li className={styles.project_item}>
-          <div>
+
+          <div className={styles.projects_image}>
             <Image src={twitterClone} alt="twitter clone" width={450} height={300}></Image>
           </div>
           <div className={styles.projects_body}>
+
             <div>
               <h3>Twitter Clone</h3>
             </div>
@@ -29,13 +31,17 @@ const Projects: React.FC = () => {
                 <a className={styles.project_link} target="_blank">Github project</a>
               </Link>
             </div>
+
           </div>
+
         </li>
         <li className={styles.project_item}>
-          <div>
+
+          <div className={styles.projects_image}>
             <Image src={typingApp} alt="typing app" width={450} height={300}></Image>
           </div>
           <div className={styles.projects_body}>
+
             <div>
               <h3>Typing App</h3>
             </div>
@@ -46,13 +52,17 @@ const Projects: React.FC = () => {
             <Link href="https://github.com/luisvalverd/typing-game" passHref>
               <a className={styles.project_link} target="_blank">Github project</a>
             </Link>
+
           </div>
+
         </li>
         <li className={styles.project_item}>
-          <div>
+
+          <div className={styles.projects_image}>
             <Image src={agendaContactos} alt="agenda contactos" width={450} height={300}></Image>
           </div>
           <div className={styles.projects_body}>
+
             <div>
               <h3>Agenda de Contactos</h3>
             </div>
@@ -63,7 +73,9 @@ const Projects: React.FC = () => {
             <Link href="https://github.com/luisvalverd/AgendaContactos" passHref>
               <a className={styles.project_link} target="_blank">Github project</a>
             </Link>
+
           </div>
+
         </li>
       </ul>
     </div>

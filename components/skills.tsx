@@ -19,12 +19,14 @@ const Skills: React.FC = () => {
         <h1>Skills</h1>
       </div>
       <ul className={styles.skill_list}>
+
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>Javascript</h2>
               <div className={styles.img}>
-                <Image src={js_logo} alt="Javascript" width={25} height={25}></Image>
+                <Image className={styles.skill_img} src={js_logo} alt="Javascript" width={25} height={25}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -34,13 +36,15 @@ const Skills: React.FC = () => {
               <span>50%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>Python</h2>
               <div className={styles.img}>
-                <Image src={python_logo} alt="Python" width={25} height={25}></Image>
+                <Image className={styles.skill_img} src={python_logo} alt="Python" width={25} height={25}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -50,13 +54,15 @@ const Skills: React.FC = () => {
               <span>45%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>Html/Css</h2>
               <div className={styles.img}>
-                <Image src={html_css_logo} alt="Html/Css" width={50} height={50}></Image>
+                <Image className={styles.skill_img} src={html_css_logo} alt="Html/Css" width={50} height={50}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -66,13 +72,15 @@ const Skills: React.FC = () => {
               <span>75%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>VueJs</h2>
               <div className={styles.img}>
-                <Image src={vue_logo} alt="VueJs" width={25} height={25}></Image>
+                <Image className={styles.skill_img} src={vue_logo} alt="VueJs" width={25} height={25}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -82,13 +90,15 @@ const Skills: React.FC = () => {
               <span>25%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>ReactJs</h2>
               <div className={styles.img}>
-                <Image src={react_logo} alt="ReactJs" width={25} height={25}></Image>
+                <Image className={styles.skill_img} src={react_logo} alt="ReactJs" width={25} height={25}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -98,13 +108,15 @@ const Skills: React.FC = () => {
               <span>20%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>Express</h2>
               <div className={styles.img}>
-                <Image src={express_logo} alt="ExpresJs" width={25} height={25}></Image>
+                <Image className={styles.skill_img} src={express_logo} alt="ExpresJs" width={25} height={25}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -114,13 +126,15 @@ const Skills: React.FC = () => {
               <span>45%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>Django</h2>
               <div className={styles.img}>
-                <Image src={django_logo} alt="ExpresJs" width={35} height={35}></Image>
+                <Image className={styles.skill_img} src={django_logo} alt="ExpresJs" width={35} height={35}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -130,13 +144,15 @@ const Skills: React.FC = () => {
               <span>30%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>PostgreSQL</h2>
               <div className={styles.img}>
-                <Image src={postgres_logo} alt="ExpresJs" width={45} height={45}></Image>
+                <Image className={styles.skill_img} src={postgres_logo} alt="ExpresJs" width={45} height={45}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -146,13 +162,15 @@ const Skills: React.FC = () => {
               <span>35%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>MongoDB</h2>
               <div className={styles.img}>
-                <Image src={mongo_logo} alt="ExpresJs" width={35} height={35}></Image>
+                <Image className={styles.skill_img} className={styles.img_mongo} src={mongo_logo} alt="ExpresJs" width={35} height={35}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -162,13 +180,15 @@ const Skills: React.FC = () => {
               <span>30%</span>
             </div>
           </div>
+
         </li>
         <li>
+
           <div>
             <div className={styles.item_title}>
               <h2>Linux</h2>
               <div className={styles.img}>
-                <Image src={linux_logo} alt="ExpresJs" width={32} height={32}></Image>
+                <Image className={styles.skill_img} src={linux_logo} alt="ExpresJs" width={32} height={32}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
@@ -178,6 +198,7 @@ const Skills: React.FC = () => {
               <span>40%</span>
             </div>
           </div>
+
         </li>
       </ul>
     </div>
