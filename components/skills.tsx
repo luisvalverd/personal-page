@@ -423,7 +423,7 @@ const Skills: React.FC = () => {
             <div className={styles.item_title}>
               <h2>MongoDB</h2>
               <div className={styles.img}>
-                <Image className={styles.skill_img} className={styles.img_mongo} src={mongo_logo} alt="ExpresJs" width={35} height={35}></Image>
+                <Image className={styles.skill_img} src={mongo_logo} alt="ExpresJs" width={35} height={35}></Image>
               </div>
             </div>
             <div className={styles.skill_item}>
