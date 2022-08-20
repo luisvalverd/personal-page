@@ -4,10 +4,10 @@ import styles from "../styles/Navbar.module.css"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 interface Props {
-  background: any;
-  refContact: any;
-  refSkill: any;
-  refProjects: any;
+  background?: string;
+  refContact?: React.RefObject<HTMLDivElement>;
+  refSkill?: React.RefObject<HTMLDivElement>;
+  refProjects?: React.RefObject<HTMLDivElement>;
 }
 
 const Navbar: React.FC<Props> = (props: Props) => {

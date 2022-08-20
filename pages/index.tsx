@@ -16,11 +16,11 @@ const Home: NextPage = () => {
   const [scrollBtn, setScrollBtn] = useState<any>("hidden");
 
   // refs
-  const init_ref = useRef();
+  const init_ref = useRef<any>();
   const ref = useRef(null);
-  const contact_ref = useRef(null);
-  const skills_ref = useRef(null);
-  const projects_ref = useRef(null);
+  const contact_ref = useRef();
+  const skills_ref = useRef();
+  const projects_ref = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
