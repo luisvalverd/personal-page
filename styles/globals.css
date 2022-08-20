@@ -55,3 +55,9 @@ a {
     background: black;
   }
 }
+
+@media screen and (max-width: 412px) {
+  .animation-navbar {
+    width: 120%;
+  }
+}

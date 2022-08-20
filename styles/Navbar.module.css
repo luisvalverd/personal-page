@@ -1,4 +1,5 @@
 .header {
+
   width: 100%;
 }
 
@@ -86,3 +87,67 @@
   display: flex;
   align-items: center;
 }
+
+.dropbox {
+  display: flex;
+  justify-content: center;
+}
+
+.dropbox > button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  height: 2rem;
+  transition: .2s;
+}
+
+.dropbox > button:hover {
+  background-color: #dedee0;
+}
+
+.dropbox > button:focus {
+  background-color: #dedee0;
+}
+
+.dropbox_icon {
+  color: #000;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+@media screen and (max-width: 412px) {
+  .navbar {
+    height: 4rem;
+  } 
+
+  .title_navbar {
+    width: 24rem;
+    margin-left: 2rem;
+  }
+
+  .links_list > ul > li {
+    display: flex;
+    position: absolute;
+    justify-content: left;
+  } 
+
+  .link {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+  }
+
+  .link:hover {
+    color: #dedede;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .navbar {
+    background-color: #fff;
+  }
+}
+
+

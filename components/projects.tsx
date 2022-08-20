@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Projects: React.FC = () => {
   return (
-    <div>
+    <div className={styles.projects}>
       <h1 className={styles.title_projects}>Projects</h1>
       <ul className={styles.project_list}>
         <li className={styles.project_item}>
@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
           </div>
           <div className={styles.projects_body}>
 
-            <div>
+            <div className={styles.title}>
               <h3>Twitter Clone</h3>
             </div>
             <div className={styles.projects_description}>
@@ -42,16 +42,18 @@ const Projects: React.FC = () => {
           </div>
           <div className={styles.projects_body}>
 
-            <div>
+            <div className={styles.title}>
               <h3>Typing App</h3>
             </div>
-            <p className={styles.projects_description}>
-              This is a project game of typing, when start the game this show a text where we will write the text,
-              this application i used vanilla javascript to make this simple page
-            </p>
-            <Link href="https://github.com/luisvalverd/typing-game" passHref>
-              <a className={styles.project_link} target="_blank">Github project</a>
-            </Link>
+            <div className={styles.projects_description}>
+              <p >
+                This is a project game of typing, when start the game this show a text where we will write the text,
+                this application i used vanilla javascript to make this simple page
+              </p>
+              <Link href="https://github.com/luisvalverd/typing-game" passHref>
+                <a className={styles.project_link} target="_blank">Github project</a>
+              </Link>
+            </div>
 
           </div>
 
@@ -63,17 +65,18 @@ const Projects: React.FC = () => {
           </div>
           <div className={styles.projects_body}>
 
-            <div>
+            <div className={styles.title}>
               <h3>Agenda de Contactos</h3>
             </div>
-            <p className={styles.projects_description}>
-              This is my first aplication that I made to learn backend technologys, this is a simple aplication to handle contacts,
-              this apllication is created using NodeJs with Express and Database Postgres, in the styles i use Boostrap.
-            </p>
-            <Link href="https://github.com/luisvalverd/AgendaContactos" passHref>
-              <a className={styles.project_link} target="_blank">Github project</a>
-            </Link>
-
+            <div className={styles.projects_description}>
+              <p>
+                This is my first aplication that I made to learn backend technologys, this is a simple aplication to handle contacts,
+                this apllication is created using NodeJs with Express and Database Postgres, in the styles i use Boostrap.
+              </p>
+              <Link href="https://github.com/luisvalverd/AgendaContactos" passHref>
+                <a className={styles.project_link} target="_blank">Github project</a>
+              </Link>
+            </div>
           </div>
 
         </li>

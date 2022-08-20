@@ -231,9 +231,70 @@
   }
 }
 
-@media screen and (max-height: 800px) {
+@media (prefers-color-scheme: light) {
+  .btn_down {
+    background-color: #BBBBBB; 
+  }
+
+  .icons {
+    color: #000;
+  }
+}
+
+/* reponsive */
+
+@media screen and (max-width: 1080px) {
+  .projects {
+    margin-top: 10rem;
+  }
+
+  .contact {
+    padding-left: 4rem;
+  }
+
   .personal_information {
     height: 38rem;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  
+  .btn_down {
+    left: 80%;
+    right: 2rem;
+  }
+
+  .main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .projects {
+    width: 100%;
+  }
+
+  .projects > div {
+    height: auto;
+  }
+
+  .personal_information {
+    height: auto;
+  }
+
+  .skill {
+    width: 100%;
+  }
+
+  .contact {
+    padding: 0;
   }
 }
 

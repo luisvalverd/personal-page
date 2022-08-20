@@ -3,4 +3,10 @@
   height: 2.5em;
 }
 
+@media (prefers-color-scheme: light) {
+  .arrow_down {
+    color: #fff;
+  }
+}
+
 

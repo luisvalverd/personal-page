@@ -120,3 +120,31 @@
   height: 100%;
   background-color: #0070f3;
 }
+
+@media screen and (max-width: 1080px) {
+  .skill {
+    width: 100%;
+  }
+  
+  .skill_list {
+    width: 100%;  
+  }
+
+  .skill_list > li {
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .skill {
+    width: 100%;
+  }
+  
+  .skill_list {
+    width: 100%;  
+  }
+
+  .skill_list > li {
+    margin: 0;
+  }
+}
